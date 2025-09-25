@@ -23,7 +23,11 @@ car = st.sidebar.number_input("Number of Car Spaces", min_value=0, max_value=10,
 landsize = st.sidebar.number_input("Land Size (sqm)", min_value=0, max_value=20000, value=200)
 buildingarea = st.sidebar.number_input("Building Area (sqm)", min_value=0, max_value=1000, value=150)
 yearbuilt = st.sidebar.number_input("Year Built", min_value=1800, max_value=2025, value=1990)
-schools_nearby = st.sidebar.number_input("Number of Schools Nearby", min_value=0, max_value=20, value=3)
+schools_nearby = st.sidebar.selectbox(
+    "Are there schools nearby?", 
+    [True, False], 
+    index=1
+)
 sale_date = st.sidebar.date_input("Sale Date")  
 year_sold = sale_date.year
 month_sold = sale_date.month
